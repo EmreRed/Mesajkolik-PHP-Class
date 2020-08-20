@@ -32,7 +32,7 @@ $sms = [
     ['gsm' => '905000000001', 'message' => 'Mesaj 1'],
     ['gsm' => '905000000002', 'message' => 'Mesaj 2'],
 ];
-$mesajkolik->advanced($sms, $baslik);
+$mesajkolik->advancedsms($sms, $baslik);
 ```
 `$sms`: Array şeklinde numara ve mesaj içerikleri girilebilir.
 `$baslik`: SMS başlığını veya başlık id'sini girebilirsiniz.
