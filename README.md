@@ -8,7 +8,7 @@ Mesajkolik PHP sınıfı ile api işlemlerini kolayca gerçekleştirebilirsiniz.
 Sayfanın devamındaki işlemleri yapabilmek için önce bu tanımlamayı yapmalısınız !
 ```php
 require_once('mesajkolik.php');
-$mesajkolik = new MesajkolikApi($api_kullanici, $api_sifre);
+$mesajkolik = new Mesajkolik($api_kullanici, $api_sifre);
 ```
 `$api_kullanici`: Oluşturduğunuz API kullanıcı adını girmelisiniz.
 `$api_sifre`: Oluşturduğunuz API şifresini girmelisiniz.
