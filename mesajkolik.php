@@ -6,7 +6,7 @@ class Mesajkolik {
 
   public function __construct($username, $password, $header='') {
     self::$apikey = md5($username.$password);
-    $this->$header = $header;
+    self::$header = $header;
   }
 
   private function call($action, $data=null){
@@ -38,10 +38,10 @@ class Mesajkolik {
     return $result!==false && $result->response->result ? $result->response->data : false;
   }
 
-  public function sendsms($gsm, $message, $header, $isUniq=1){
+  public function sendsms($gsm, $message, $header=null, $isUniq=1){
+    if($header === null) $header = self::$header;
     $gsm = is_array($gsm) ? $gsm : explode(',', $gsm);
     $gsm = array_filter($gsm);
-
     $data = '{
       "data": {
         "deliveries": [
@@ -68,9 +68,7 @@ class Mesajkolik {
     $data->global_options = new stdClass();
     $data->global_options->header = $header;
     $data->global_options->gsm_isUnique = $isUniq;
-
     $data->data->deliveries = [];
-
     foreach($sms as $key){
       $delivery['recipients'] = ['gsms' => is_array($key['gsm']) ? $key['gsm'] : [$key['gsm']]];
       $delivery['message'] = base64_encode($key['message']);

@@ -8,10 +8,11 @@ Mesajkolik PHP sınıfı ile api işlemlerini kolayca gerçekleştirebilirsiniz.
 Sayfanın devamındaki işlemleri yapabilmek için önce bu tanımlamayı yapmalısınız !
 ```php
 require_once('mesajkolik.php');
-$mesajkolik = new Mesajkolik($api_kullanici, $api_sifre);
+$mesajkolik = new Mesajkolik($api_kullanici, $api_sifre, $baslik);
 ```
 `$api_kullanici`: Oluşturduğunuz API kullanıcı adını girmelisiniz.
 `$api_sifre`: Oluşturduğunuz API şifresini girmelisiniz.
+`$baslik`: Varsayılan olarak kullanılacak SMS başlığı. (Opsiyonel)
 
 ------------
 
@@ -21,7 +22,7 @@ Tekil veya toplu sms gönderimi için kullanılır.
 $mesajkolik->sendsms($gsm, $baslik);
 ```
 `$gsm`: Numaraları virgül şeklinde veya array olarak ekleyebilirsiniz.
-`$baslik`: SMS başlığını veya başlık id'sini girebilirsiniz.
+`$baslik`: SMS başlığını veya başlık ID'sini girebilirsiniz.
 
 ------------
 
@@ -76,10 +77,8 @@ $kisi->surname = $surname;
 $kisi->gsm = $gsm;
 $kisi->group_id = $grupid;
 $kisiler[] = $kisi;
-         
+
 $mesajkolik->personadd($kisiler, $grupid);
 ```
 `$kisiler`: Array formatta olmalıdır. İçine eklediğiniz kişileri gösterildiği üzere object formatında girebilirsiniz.
 `$grupid`: Kişilerinizin ekleneceği grup id'sini girmelisiniz.
-
-
