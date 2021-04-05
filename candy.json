@@ -1,0 +1,7 @@
+{
+    "name": "Mesajkolik",
+    "return": "Mesajkolik",
+    "autoload": [
+        "mesajkolik.php"
+    ]
+}
