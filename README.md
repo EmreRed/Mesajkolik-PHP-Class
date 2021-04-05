@@ -10,9 +10,9 @@ Sayfanın devamındaki işlemleri yapabilmek için önce bu tanımlamayı yapmal
 require_once('mesajkolik.php');
 $mesajkolik = new Mesajkolik($api_kullanici, $api_sifre, $baslik);
 ```
-`$api_kullanici`: Oluşturduğunuz API kullanıcı adını girmelisiniz.
-`$api_sifre`: Oluşturduğunuz API şifresini girmelisiniz.
-`$baslik`: Varsayılan olarak kullanılacak SMS başlığı. (Opsiyonel)
+`$api_kullanici`: Oluşturduğunuz API kullanıcı adını girmelisiniz.  
+`$api_sifre`: Oluşturduğunuz API şifresini girmelisiniz.  
+`$baslik`: Varsayılan olarak kullanılacak SMS başlığı. (Opsiyonel)  
 
 ------------
 
@@ -21,8 +21,8 @@ Tekil veya toplu sms gönderimi için kullanılır.
 ```php
 $mesajkolik->sendsms($gsm, $baslik);
 ```
-`$gsm`: Numaraları virgül şeklinde veya array olarak ekleyebilirsiniz.
-`$baslik`: SMS başlığını veya başlık ID'sini girebilirsiniz.
+`$gsm`: Numaraları virgül şeklinde veya array olarak ekleyebilirsiniz.  
+`$baslik`: SMS başlığını veya başlık ID'sini girebilirsiniz.  
 
 ------------
 
@@ -35,8 +35,8 @@ $sms = [
 ];
 $mesajkolik->advancedsms($sms, $baslik);
 ```
-`$sms`: Array şeklinde numara ve mesaj içerikleri girilebilir.
-`$baslik`: SMS başlığını veya başlık id'sini girebilirsiniz.
+`$sms`: Array şeklinde numara ve mesaj içerikleri girilebilir.  
+`$baslik`: SMS başlığını veya başlık id'sini girebilirsiniz.  
 
 ------------
 
@@ -62,7 +62,7 @@ Hesabınıza rehber ekler.
 $mesajkolik->groupadd($grupadi);
 ```
 `$grupadi`: Grup adı girebilirsiniz. Tek seferde çoklu grup eklemek için array girebilirsiniz.
-Girdiğiniz grup hesabınızda mevcut ise mevcut grubun id'sini döndürür.
+Girdiğiniz grup hesabınızda mevcut ise mevcut grubun id'sini döndürür.  
 
 ------------
 
@@ -80,5 +80,5 @@ $kisiler[] = $kisi;
 
 $mesajkolik->personadd($kisiler, $grupid);
 ```
-`$kisiler`: Array formatta olmalıdır. İçine eklediğiniz kişileri gösterildiği üzere object formatında girebilirsiniz.
-`$grupid`: Kişilerinizin ekleneceği grup id'sini girmelisiniz.
+`$kisiler`: Array formatta olmalıdır. İçine eklediğiniz kişileri gösterildiği üzere object formatında girebilirsiniz.  
+`$grupid`: Kişilerinizin ekleneceği grup id'sini girmelisiniz.  
