@@ -95,4 +95,20 @@ class Mesajkolik {
     $result = self::call('groupcontentadd', $data);
     return $result!==false ? $result->response : false;
   }
+
+  public function keywords(){
+    $result = self::call('keywords');
+    return $result!==false ? $result->response : false;
+  }
+
+  public function inbox($keyword=null, $begin=null, $end=null){
+    $data = new stdClass();
+    $data->data = new stdClass();
+    $data->data->date = new stdClass();
+    if($keyword !== null) $data->data->rootKeyword = $keyword;
+    if($begin !== null) $data->data->date->begin = $begin;
+    if($end !== null) $data->data->date->end = $end;
+    $result = self::call('inbox', $data);
+    return $result!==false ? $result->response : false;
+  }
 }
