@@ -1,5 +1,5 @@
 # Mesajkolik PHP
-Mesajkolik PHP sınıfı ile api işlemlerini kolayca gerçekleştirebilirsiniz.
+Mesajkolik PHP sınıfı ile api işlemlerini kolayca gerçekleştirebilirsiniz.  
 `Öncesinde panel üzerinden API kullanıcısı oluşturmalısınız!`
 
 ## Örnekler
@@ -82,3 +82,14 @@ $mesajkolik->personadd($kisiler, $grupid);
 ```
 `$kisiler`: Array formatta olmalıdır. İçine eklediğiniz kişileri gösterildiği üzere object formatında girebilirsiniz.  
 `$grupid`: Kişilerinizin ekleneceği grup id'sini girmelisiniz.  
+
+------------
+
+##### Gelen Mesajları Listeleme
+Hesabınıza tanımlı anahtar kelimeleriniz ile gelen mesajları listelemenizi sağlar.
+```php
+$mesajkolik->inbox($keyword, $begin, $date);
+```
+`$keyword`: Mesajları anahtar kelimeye göre filtrelemek için girilebilir. (Opsiyonel)  
+`$begin`: Başlangıç tarihi (YYYY-MM-DD) (Opsiyonel)  
+`$end`: Bitiş tarihi (YYYY-MM-DD) (Opsiyonel)  
