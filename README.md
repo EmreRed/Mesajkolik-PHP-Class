@@ -85,6 +85,14 @@ $mesajkolik->personadd($kisiler, $grupid);
 
 ------------
 
+##### Anahtar Kelimeleri Listeleme
+Hesabınıza tanımlı gelen kutusu anahtar kelimelerinizi listeler.
+```php
+$mesajkolik->keywords();
+```
+
+------------
+
 ##### Gelen Mesajları Listeleme
 Hesabınıza tanımlı anahtar kelimeleriniz ile gelen mesajları listelemenizi sağlar.
 ```php
