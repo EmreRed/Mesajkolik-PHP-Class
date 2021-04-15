@@ -19,9 +19,10 @@ $mesajkolik = new Mesajkolik($api_kullanici, $api_sifre, $baslik);
 ##### SMS Gönderimi
 Tekil veya toplu sms gönderimi için kullanılır.
 ```php
-$mesajkolik->sendsms($gsm, $baslik);
+$mesajkolik->sendsms($gsm, $message, $baslik);
 ```
 `$gsm`: Numaraları virgül şeklinde veya array olarak ekleyebilirsiniz.  
+`$message`: SMS içeriğini string olarak girebilirsiniz.  
 `$baslik`: SMS başlığını veya başlık ID'sini girebilirsiniz.  
 
 ------------
