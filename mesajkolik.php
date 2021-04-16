@@ -30,7 +30,7 @@ class Mesajkolik {
 
   public function getBalance(){
     $result = self::call('balance');
-    return $result!==false && $result->response->result ? $result->response->data->credit : false;
+    return $result!==false && $result->response->result ? $result->response->data : false;
   }
 
   public function getHeaders(){
