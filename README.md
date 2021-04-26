@@ -57,7 +57,7 @@ $mesajkolik->getHeaders();
 
 ------------
 
-##### Rehberleri Sorgulama
+##### Grupları Sorgulama
 Hesabınıza rehber gruplarını getirir.
 ```php
 $mesajkolik->getGroups();
