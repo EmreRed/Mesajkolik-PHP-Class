@@ -38,6 +38,11 @@ class Mesajkolik {
     return $result!==false && $result->response->result ? $result->response->data : false;
   }
 
+  public function getGroups(){
+    $result = self::call('groups');
+    return $result!==false && $result->response->result ? $result->response->data : false;
+  }
+
   public function sendsms($gsm, $message, $header=null, $isUniq=1){
     if($header === null) $header = self::$header;
     $gsm = is_array($gsm) ? $gsm : explode(',', $gsm);
