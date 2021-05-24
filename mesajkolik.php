@@ -116,4 +116,12 @@ class Mesajkolik {
     $result = self::call('inbox', $data);
     return $result!==false ? $result->response : false;
   }
+
+  public function report($id){
+    $data = new stdClass();
+    $data->data = new stdClass();
+    $data->data->transaction_ids = !is_array($id) ? [$id] : $id;
+    $result = self::call('basicreport', $data);
+    return $result!==false ? $result->response : false;
+  }
 }
