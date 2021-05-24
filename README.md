@@ -41,6 +41,15 @@ $mesajkolik->advancedsms($sms, $baslik);
 
 ------------
 
+##### Basit Rapor Alma
+SMS sonuçlarını basit rapor olarak almak için kullanılır.  
+```php
+$mesajkolik->report($raporid);
+```
+`$raporid`: Rapor id veya array şeklinde birden fazla rapor id girilebilir.  
+
+------------
+
 ##### Bakiye Sorgulama
 Hesabınızdaki SMS kredisi ve TL miktarını sorgulamak için kullanılır.
 ```php
