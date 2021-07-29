@@ -43,6 +43,11 @@ class Mesajkolik {
     return $result!==false && $result->response->result ? $result->response->data : false;
   }
 
+  public function getUsers(){
+    $result = self::call('users');
+    return $result!==false && $result->response->result ? $result->response->data : false;
+  }
+
   public function sendsms($gsm, $message, $header=null, $isUniq=1){
     if($header === null) $header = self::$header;
     $gsm = is_array($gsm) ? $gsm : explode(',', $gsm);
@@ -124,4 +129,10 @@ class Mesajkolik {
     $result = self::call('basicreport', $data);
     return $result!==false ? $result->response : false;
   }
+
+  public function raw($action,$data){
+    $result = self::call($action, $data);
+    return $result!==false ? $result->response : false;
+  }
+
 }
